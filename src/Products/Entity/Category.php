@@ -6,12 +6,10 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use JMS\Serializer\Annotation\Groups;
 use JMS\Serializer\Annotation\Type;
-use Swagger\Annotations as SWG;
 
 /**
  * @ORM\Entity
  * @ORM\Table(name="categories")
- * @SWG\Model(id="Category")
  */
 class Category
 {
@@ -21,7 +19,6 @@ class Category
      * @ORM\Column(type="integer")
      * @ORM\GeneratedValue
      * @Groups({"list", "detail"})
-     * @SWG\Property(name="id", type="integer")
      */
     protected $id;
 
@@ -29,7 +26,6 @@ class Category
      * @Type("string")
      * @ORM\Column(type="string")
      * @Groups({"list", "detail"})
-     * @SWG\Property(name="name", type="string")
      */
     protected $name;
 
